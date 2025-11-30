@@ -110,13 +110,17 @@ router.get(
   (req, res) => {
     // Tạo JWT token cho Google OAuth (tùy chọn, để nhất quán với đăng nhập thường)
     // Dòng code MỚI (sử dụng cho cả 3 chỗ)
+    const user = req.user;
+    if (!user) {
+      return res.redirect("/api/auth/login/failed");
+    }
     const token = jwt.sign(
       { userId: user._id, email: user.email, role: user.role }, // <-- ĐÃ THÊM ROLE
       process.env.JWT_SECRET || "secret_key_default",
       { expiresIn: "7d" }
     );
     // Chuyển hướng về frontend với token (hoặc lưu vào cookie)
-    res.redirect(`http://localhost:3000?token=${token}`);
+    res.redirect(`http://localhost:3000/login?token=${token}`);
   }
 );
 
