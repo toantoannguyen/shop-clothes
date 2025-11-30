@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../api/axiosConfig";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://shop-clothes-backend.onrender.com";
 
 function ProductTrashPage() {
   const [products, setProducts] = useState([]);

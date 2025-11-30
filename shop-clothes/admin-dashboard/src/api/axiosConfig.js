@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 1. Tạo một "instance" (thể hiện) của axios
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // URL gốc của backend
+  baseURL: "https://shop-clothes-backend.onrender.com/api", // URL gốc của backend
 });
 
 // 2. Cấu hình "interceptor" (bộ chặn)

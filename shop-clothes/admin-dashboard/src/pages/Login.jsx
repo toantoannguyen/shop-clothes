@@ -9,7 +9,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   // CHÚ Ý: Đổi port 5000 nếu backend của bạn chạy ở port khác
-  const API_URL = "http://localhost:5000/api/auth/login";
+  const API_URL = "https://shop-clothes-backend.onrender.com/api/auth/login";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

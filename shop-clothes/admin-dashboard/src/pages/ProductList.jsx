@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import api from "../api/axiosConfig"; // API helper của chúng ta
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://shop-clothes-backend.onrender.com";
 
 function ProductListPage() {
   const [products, setProducts] = useState([]);

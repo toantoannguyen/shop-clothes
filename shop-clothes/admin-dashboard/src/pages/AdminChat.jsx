@@ -13,7 +13,7 @@ import {
 import io from "socket.io-client";
 
 // ✅ Kết nối tới server
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://shop-clothes-backend.onrender.com";
 let socket = null;
 
 function AdminChatPage() {
